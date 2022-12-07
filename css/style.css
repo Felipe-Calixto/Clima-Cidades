@@ -24,10 +24,6 @@ body {
     margin-bottom: .8rem;
 }
 
-@media (min-width: 2000px) {
-    #tittle {font-size: 22px;} 
-}
-
 #main-conteiner {
     background: rgba(0, 150, 200, 0.8);
     box-shadow: white;
