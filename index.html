@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clima</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main-conteiner">
+        <h1 id="tittle">Pesquise o clima da cidade:</h1>
+        <div id="search-conteiner">
+            <form>
+                <input type="text" placeholder="Cidade" id="input-city">
+                <button id="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div id="infs-conteiner" class="hide">
+            <div id="city-conteiner">
+                <h1></h1>
+                <img src="" id="country">
+            </div>
+            <div id="temp-conteiner">
+                <div id="graus-conteiner">
+                    <p><i class="fa-solid fa-temperature-three-quarters"></i><span id="temperatura">24</span>&deg;</p>
+                </div>
+                <div id="img-conteiner">
+                    <img src="" id="temp-img">
+                </div>
+            </div>
+            <div id="vento-conteiner">
+                <i class="fa-solid fa-wind"></i>
+                <span></span>
+            </div>
+            <div id="umidade-conteiner">
+                    <i class="fa-solid fa-droplet"></i>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

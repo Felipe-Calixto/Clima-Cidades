@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/background.jpg");
+    background-size: cover;
+}
+
+.hide {
+    display: none !important;
+}
+
+#tittle {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: .8rem;
+}
+
+#main-conteiner {
+    background: rgba(0, 150, 200, 0.8);
+    box-shadow: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+#search-conteiner {
+    height: 3.5rem;
+}
+
+#input-city {
+    font-size: 24px;
+    padding: .2rem;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background: none;
+    border-radius: 5px;
+}
+
+#input-city::placeholder {
+    color: white;
+}
+
+#btn-search {
+    font-weight: bold;
+    font-size: 24px;
+    width: 3rem;
+    padding: .2rem;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 230, 255);
+    background: rgb(0, 230, 255);
+    color: white;
+    cursor: pointer;
+}   
+
+#btn-search:hover {
+    transition: .3s;
+    background: transparent;
+    color: rgb(0, 230, 255);
+}
+
+#infs-conteiner {
+    border-top: 1px solid white;
+}
+
+#city-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#country {
+    width: 1.6rem;
+    height: 1.2rem;
+    margin-left: .6rem;
+}
+
+#temp-conteiner {
+    display: flex;
+}
+
+#graus-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: end;
+
+}
+
+#graus-conteiner i {
+    background: linear-gradient(180deg, red,blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#img-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+#temp-img {
+    width: 6rem;
+}
+
+#vento-conteiner {
+    margin-top: 4rem;
+    height: 2.2rem;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    font-size: 22px;
+    color: rgb(185, 185, 185);
+}
+
+#vento-conteiner span{
+    color: white;
+    margin-left: 15.6rem;
+}
+
+#umidade-conteiner {
+    margin-top: .5rem;
+    font-weight: bold;
+    font-size: 22px;
+    color: blue;
+}
+
+#umidade-conteiner span{
+    color: white;
+    margin-left: 18.6rem;
+}
