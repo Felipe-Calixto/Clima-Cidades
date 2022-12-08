@@ -9,6 +9,8 @@ const tempImg = document.querySelector("#temp-img");
 const vento = document.querySelector("#vento-conteiner span");
 const umidade = document.querySelector("#umidade-conteiner span");
 const conteiner = document.querySelector("#infs-conteiner");
+const load = document.querySelector("#box-load");
+const erroText = document.querySelector("#error");
 
 
 //FUNCTIONS//
@@ -20,6 +22,18 @@ const getItensApi = async (city)=> {
     const data = await resp.json();
 
     console.log(data)
+
+    if(data.cod == 404) {
+        load.style = "display: none";
+        conteiner.classList.add("hide");
+        erroText.classList.remove("hide");
+
+        setTimeout(() => {
+            erroText.classList.add("hide");      
+        }, 2000);
+
+    }
+
     return data;
 }
 
@@ -32,8 +46,20 @@ const alterItens =  async (city)=> {
     tempImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
     vento.textContent = `${data.wind.speed}Km/h`;
     umidade.textContent = `${data.main.humidity}%`
-    conteiner.classList.remove("hide");
+    
+    if(cityText != "undefined" && temp != "undefined" && vento != "undefined" && umidade != "undefined") {
+        load.style = "display: none";
+        conteiner.classList.remove("hide");
+    }
 }
+
+const loading = ()=> {
+
+    load.style = "display: flex";
+    conteiner.classList.add("hide");
+
+}
+
 
 //EVENTS
 
@@ -44,6 +70,7 @@ btn.addEventListener("click", (event)=> {
     const city = inputCity.value;
     alterItens(city);
     inputCity.value = "";
+    loading();
 
 });
     
